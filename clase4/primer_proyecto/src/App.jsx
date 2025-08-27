@@ -25,7 +25,7 @@ function App() {
   return (
     <div style={{ padding: '20px', fontFamily: 'Arial, sans-serif' }}>
       <h1>Ejemplos de Componente Card</h1>
-      <p>Demostrando props con valores, funciones y children</p>
+      <p>Demostrando props con valores, funciones y children, entre otros...</p>
 
       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '20px', justifyContent: 'center' }}>
 
