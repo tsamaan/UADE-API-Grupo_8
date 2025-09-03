@@ -1,0 +1,66 @@
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.loading-spinner {
+  margin-bottom: 20px;
+}
+
+.loading-spinner.small .spinner-inner {
+  width: 32px;
+  height: 32px;
+}
+
+.loading-spinner.medium .spinner-inner {
+  width: 48px;
+  height: 48px;
+}
+
+.loading-spinner.large .spinner-inner {
+  width: 64px;
+  height: 64px;
+}
+
+.spinner-inner {
+  position: relative;
+  display: inline-block;
+}
+
+.spinner-circle {
+  width: 100%;
+  height: 100%;
+  border: 4px solid #f3f3f3;
+  border-top: 4px solid #3483fa;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.loading-message {
+  color: #666;
+  font-size: 16px;
+  margin: 0;
+  font-weight: 500;
+}
+
+/* Variantes de color */
+.loading-spinner.success .spinner-circle {
+  border-top-color: #00a650;
+}
+
+.loading-spinner.warning .spinner-circle {
+  border-top-color: #f39c12;
+}
+
+.loading-spinner.error .spinner-circle {
+  border-top-color: #ff4757;
+}

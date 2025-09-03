@@ -1,0 +1,273 @@
+.app-header {
+  background: linear-gradient(135deg, #3483fa 0%, #2968c8 100%);
+  color: white;
+  padding: 25px 20px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.header-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-main h1 {
+  margin: 0 0 8px 0;
+  font-size: 32px;
+  font-weight: 700;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-main p {
+  margin: 0;
+  font-size: 16px;
+  opacity: 0.9;
+  font-weight: 400;
+}
+
+.header-search {
+  position: relative;
+}
+
+.search-toggle {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  backdrop-filter: blur(10px);
+}
+
+.search-toggle:hover {
+  background: rgba(255, 255, 255, 0.3);
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.search-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 10px;
+  width: 400px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow: hidden;
+}
+
+.search-input-container {
+  display: flex;
+  align-items: center;
+  padding: 15px;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.global-search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  background: #f8f9fa;
+  color: #333;
+}
+
+.global-search-input::placeholder {
+  color: #999;
+}
+
+.search-close {
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: #666;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.search-close:hover {
+  background: #f0f0f0;
+}
+
+.search-loading {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+.search-results {
+  max-height: 300px;
+  overflow-y: auto;
+}
+
+.search-result-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.search-result-item:hover {
+  background: #f8f9fa;
+}
+
+.search-result-item:last-child {
+  border-bottom: none;
+}
+
+.search-result-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 15px;
+  flex-shrink: 0;
+}
+
+.search-result-info {
+  flex: 1;
+  min-width: 0;
+}
+
+.search-result-info h4 {
+  margin: 0 0 5px 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.search-result-info p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: 600;
+  color: #3483fa;
+}
+
+.search-more-results {
+  padding: 12px 15px;
+  text-align: center;
+  color: #666;
+  font-size: 14px;
+  background: #f8f9fa;
+  border-top: 1px solid #e0e0e0;
+}
+
+.search-no-results {
+  padding: 20px;
+  text-align: center;
+  color: #666;
+  font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 1200px) {
+  .header-content {
+    max-width: 1000px;
+    gap: 30px;
+  }
+  
+  .header-main h1 {
+    font-size: 28px;
+  }
+  
+  .header-main p {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .app-header {
+    padding: 20px;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+  
+  .header-main h1 {
+    font-size: 24px;
+  }
+  
+  .header-main p {
+    font-size: 14px;
+  }
+  
+  .search-dropdown {
+    width: 100vw;
+    max-width: 350px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}
+
+@media (max-width: 640px) {
+  .app-header {
+    padding: 18px 15px;
+  }
+  
+  .header-main h1 {
+    font-size: 22px;
+  }
+  
+  .header-main p {
+    font-size: 13px;
+  }
+  
+  .search-toggle {
+    padding: 8px 16px;
+    font-size: 13px;
+  }
+  
+  .search-dropdown {
+    max-width: calc(100vw - 30px);
+  }
+}
+
+@media (max-width: 480px) {
+  .app-header {
+    padding: 15px;
+  }
+  
+  .header-main h1 {
+    font-size: 20px;
+  }
+  
+  .header-main p {
+    font-size: 12px;
+  }
+  
+  .search-toggle {
+    padding: 6px 14px;
+    font-size: 12px;
+  }
+  
+  .search-input-container {
+    padding: 12px;
+  }
+  
+  .global-search-input {
+    font-size: 14px;
+    padding: 8px 12px;
+  }
+}
